@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "build": "nativefier 'https://inbox.google.com' --app-name 'Inbox' --icon inbox.icns --overwrite",
-    "osx": "npm install build && rm -rf \"$HOME/Applications/Inbox.app\" && cp -r Inbox-darwin-x64/Inbox.app \"$HOME/Applications\""
+    "build": "nativefier 'https://inbox.google.com' --name 'Inbox' --icon inbox.icns --overwrite -m --width 1500 --height 1000",
+    "osx": "npm install && npm run build && rm -rf \"$HOME/Applications/Inbox.app\" && cp -r Inbox-darwin-x64/Inbox.app \"$HOME/Applications\""
   },
   "dependencies": {
-    "nativefier": "^6.5.6"
+    "nativefier": "^6.14.0"
   }
 }
